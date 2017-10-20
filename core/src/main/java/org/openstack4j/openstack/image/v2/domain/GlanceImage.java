@@ -97,7 +97,7 @@ public class GlanceImage implements Image {
 
     private Long size;
 
-    private List<String> locations;
+    private List<GlanceLocation> locations;
 
     @JsonProperty("direct_url")
     private String directUrl;
@@ -267,7 +267,7 @@ public class GlanceImage implements Image {
     }
 
     @Override
-    public List<String> getLocations() {
+    public List<GlanceLocation> getLocations() {
         return locations;
     }
 

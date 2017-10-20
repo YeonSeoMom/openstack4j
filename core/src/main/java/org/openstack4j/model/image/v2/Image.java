@@ -9,6 +9,7 @@ import org.openstack4j.model.image.v2.builder.ImageBuilder;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import org.openstack4j.openstack.image.v2.domain.GlanceLocation;
 
 /**
  * A Glance v2.0-2.3 Image
@@ -188,7 +189,7 @@ public interface Image extends BasicResource, Buildable<ImageBuilder> {
      * This list appears if the show_multiple_locations option is
      * set to true in the Image service's configuration file.
      */
-    List<String> getLocations();
+    List<GlanceLocation> getLocations();
 
     /**
      * @return the URL to access the image file kept in external store
